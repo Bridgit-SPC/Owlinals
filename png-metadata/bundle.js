@@ -578,7 +578,9 @@ function insertMetadata(chunks,metadata){
 	}
 }
 
-
+if (typeof window !== 'undefined') {
+    window.writeMetadata = writeMetadata;
+}
 
 module.exports = {
 	RESOLUTION_UNITS: RESOLUTION_UNITS,
